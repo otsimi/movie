@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_drawer"
+    app:startDestination="@id/homeFragment"
+    tools:ignore="ExtraText">
+    >
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.zozamax_app.fragments.PopularFragment"
+        android:label="Home"
+        tools:layout="@layout/fragment_popular" />
+
+
+    <fragment
+        android:id="@+id/movieFragment"
+        android:name="com.example.zozamax_app.fragments.MovieFragment"
+        android:label="fragment_movie"
+        tools:layout="@layout/fragment_movie" >
+        <argument
+            android:name="movie"
+            app:argType="com.example.zozamax_app.data.Result" />
+    </fragment>
+        <argument
+            android:name="movie"
+            app:argType="com.example.zozamax_app.data.Result" />
+    <fragment
+        android:id="@+id/TopFragment"
+        android:name="com.example.zozamax_app.fragments.TopFragment"
+        android:label="Top Rated"
+        />
+    <action
+        android:id="@+id/action_homeFragment_to_TopFragment"
+        app:destination="@id/TopFragment"/>
+
+    <fragment
+        android:id="@+id/upcoming"
+        android:name="com.example.zozamax_app.fragments.UpcomingFragment"
+        android:label="Upcoming">
+    <action
+        android:id="@+id/action_homeFragment_to_upcomingFragment"
+        app:destination="@id/upcoming" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/onTv"
+        android:name="com.example.zozamax_app.fragments.OnTvFragment"
+        android:label="OnTv"
+        tools:layout="@layout/fragment_on_tv">
+
+    <action
+        android:id="@+id/action_userFragment_to_onTvFragment"
+        app:destination="@id/onTv" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nowPlaying"
+        android:name="com.example.zozamax_app.fragments.NowPlayingFragment"
+        android:label="Now Playing"
+        tools:layout="@layout/fragment_nowplaying">
+
+        <action
+            android:id="@+id/action_userFragment_to_nowPlayingFragment"
+            app:destination="@id/nowPlaying" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/topRated"
+        android:name="com.example.zozamax_app.fragments.TopFragment"
+        android:label="Top Rated"
+        tools:layout="@layout/fragment_top">
+
+        <action
+            android:id="@+id/action_userFragment_to_topFragment"
+            app:destination="@id/topRated" />
+    </fragment>
+    <fragment
+        android:id="@+id/popular"
+        android:name="com.example.zozamax_app.fragments.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_popular">
+
+        <action
+            android:id="@+id/action_userFragment_to_home1Fragment"
+            app:destination="@id/popular" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/home"
+        android:name="com.example.zozamax_app.fragments.PopularFragment"
+        android:label="Popular"
+        tools:layout="@layout/fragment_popular">
+
+        <action
+            android:id="@+id/action_userFragment_to_popularFragment"
+            app:destination="@id/home" />
+    </fragment>
+
+</navigation>
